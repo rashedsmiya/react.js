@@ -13,6 +13,11 @@ function Home() {
         </section>
         <section className="productSection">
             oure products
+            <div className="productMid">
+                <div className="productItems">
+                    <img src="/" alt="" />
+                </div>
+            </div>
         </section>
         </>
         

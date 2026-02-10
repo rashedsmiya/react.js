@@ -1,6 +1,12 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 .productSection{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     background: red;
 }
+

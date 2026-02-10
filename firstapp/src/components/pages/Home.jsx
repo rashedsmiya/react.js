@@ -15,7 +15,8 @@ function Home() {
             oure products
             <div className="productMid">
                 <div className="productItems">
-                    <img src="https://opensource.fb.com/img/projects/react.jpg" alt="" />
+                    <img src="/images/react.jpg" alt="" />
+                    <h3>Product Name</h3>
                 </div>
             </div>
         </section>

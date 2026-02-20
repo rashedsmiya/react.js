@@ -3,6 +3,10 @@ import Footer from "../common/Footer"
 import "./Home.css"
 import React from "react"
 
+
+
+import productImage from "../../assets/images/closeup.jpg"
+
 function Home() {
 
     let n =10
@@ -21,10 +25,10 @@ function Home() {
     ]
 
     
-
+    
     return (
         <>
-
+       
             {
                 user.map((obj,index)=>{
                     return (
@@ -33,9 +37,6 @@ function Home() {
                 })
             }
 
-            
-
-    
             {
                 status ? <p>Condition Welcome</p> : ''
             }
@@ -46,8 +47,9 @@ function Home() {
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, rerum nostrum? Cupiditate quam officiis quo, ducimus consequatur sed neque nulla facere! Iusto earum magni, doloribus eius excepturi eos reprehenderit suscipit!.</p>
         </section>
         <section className="productSection">
+            <img src={productImage} alt="" />
             oure products
-            <div className="productMid">
+            <div className="productMid"> 
                 <ProductCard />
                 <ProductCard />
                 <ProductCard />

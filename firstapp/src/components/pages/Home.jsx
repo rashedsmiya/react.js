@@ -1,11 +1,10 @@
 import Header from "../common/Header"
 import Footer from "../common/Footer"
+import Btn from "../common/Btn"
 import "./Home.css"
-import React from "react"
-
-
 
 import productImage from "../../assets/images/closeup.jpg"
+import { product } from "../../data/product"
 
 function Home() {
 
@@ -23,8 +22,6 @@ function Home() {
         {id:4,name:"Sandeep Rao",age:33},
         {id:5,name:"Ravi Rao",age:33},
     ]
-
-    
     
     return (
         <>
@@ -38,42 +35,43 @@ function Home() {
             }
 
             {
-                status ? <p>Condition Welcome</p> : ''
+                status ? <p>Condition Welcome</p> : null
             }
 
         <section>
         <Header />
         <h1>Welcome to Home Page {n+m} {"welcome"} {'welcome'} {'welcome'}</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, rerum nostrum? Cupiditate quam officiis quo, ducimus consequatur sed neque nulla facere! Iusto earum magni, doloribus eius excepturi eos reprehenderit suscipit!.</p>
+        <Btn value={"Read More"} color="red"/>
         </section>
         <section className="productSection">
             <img src={productImage} alt="" />
             oure products
             <div className="productMid"> 
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-            </div>
+                {
+                  product.map((obj,index)=> <ProductCard data={obj} />)
+                } 
+            </div> 
         </section>
         </>
         
     )
 }
 export default Home
+ 
+function ProductCard({data}){
 
-function ProductCard(){
+
     return (
         <>
         <div className="productItems">
-                    <img src="/images/react.jpg" alt="" />
-                    <h3>Product Name</h3>
-                </div>
+                <img src={data.thumbnail} alt="" />
+                <h3>
+                    {data.price}
+                    {data.title}
+                </h3>
+                <Btn value={"View Details"} color="blue" />
+        </div>
         </>
     );
 }

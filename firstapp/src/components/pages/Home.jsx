@@ -61,7 +61,6 @@ export default Home
  
 function ProductCard({data}){
 
-
     return (
         <>
         <div className="productItems">
@@ -70,6 +69,7 @@ function ProductCard({data}){
                     {data.price}
                     {data.title}
                 </h3>
+                <p>{data.description}</p>
                 <Btn value={"View Details"} color="blue" />
         </div>
         </>
